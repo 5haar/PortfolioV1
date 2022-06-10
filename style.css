@@ -1,0 +1,101 @@
+:root {
+    --grey: #2F2F2F;
+    --eerieblack: #222222;
+    --mainblue: #84DCC6;
+    --white: #FFFFFF;
+  }
+  
+  @font-face {
+      font-family: 'PetitaBold';
+      src: url('fonts/PetitaBold.ttf');
+  }
+  
+  * {
+      margin: 0 auto;
+      scroll-behavior: smooth;
+  }
+  
+  .main_header {
+      background-color: var(--eerieblack);
+      color: var(--mainblue);
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  
+  .main_header h1 {
+      margin: 0 auto;
+      font-size: 10em;
+      font-family: PetitaBold;
+  }
+  
+  .main_header small {
+      margin: 0 auto;
+      font-size: 3em;
+      font-family: PetitaBold;
+  }
+  
+  #section_one {
+      background-color: var(--eerieblack);
+      color: var(--main);
+      height: 100vh;
+      width: 100%;
+  }
+  
+  /* Scroll Down Animation */
+  .scroll-down {
+    height: 1em;
+    width: 2em;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    padding-top: 50px;
+    transition: all 0.3s ease 0s;
+    border: 1px solid var(--white);
+  }
+  
+  .scroll-down:hover {
+    background-color: var(--grey);
+  }
+  
+  .scroll-down::before,
+  .scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 1px solid var(--white);
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+  }
+  
+  .scroll-down::after {
+    top: 30%;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes scroll-down {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      top: 90%;
+    }
+  }
