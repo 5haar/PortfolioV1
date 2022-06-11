@@ -239,7 +239,10 @@ footer {
   background-color: transparent;
   padding: 0.5em;
 }
-
+.link ul li a {
+  color: var(--white);
+  text-decoration: none;
+}
 .links ul li a:visited {
   color: var(--white);
   text-decoration: none;
