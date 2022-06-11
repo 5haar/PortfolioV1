@@ -6,23 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shaar | Portfolio</title>
     <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-
     <section class="main_container">
+      <section class="navbar">
+          <ul>
+            <li><a href="#">Who Am I</a> </li>
+            <li><a href="#">Tech Projects</a></li>
+            <li><a href="#">Professional Development</a></li>
+          </ul>
+      </section>
           <section class="main_header">
             <small>Hi, i'm</small>
-            <h1>Shaar</h1>
-            <a href="#section_one" aria-label="scroll-down-link">
+            <h1><a href="#">Shaar</a></h1>
+            <a href="#section_two" aria-label="scroll-down-link">
             <div class="scroll-down"></div>
             </a>
           </section>
-          <section id="section_one">
-            <section class="content_one">
-              <p>adsfg</p>
+
+          <div id="loader-wrapper">
+          <span class="loader"><span class="loader-inner"></span></span>
+        </div>
+
+          <section id="section_two">
+            <section class="whoAmI">
+              <h2 class="heading">Who Am I?</h2>
+              <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iste eum, sapiente nam dolores magni! Excepturi incidunt vitae modi doloribus! Voluptatem quaerat dolore sequi quae molestias. Sit fugit sed aliquid! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repellat voluptatem nobis quaerat totam tempore quidem accusamus exercitationem eos debitis cupiditate adipisci ea recusandae vitae, quasi culpa quos minus corporis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur quos molestias velit repellendus minus dolores officiis, ea nam asperiores deleniti quasi repudiandae facere optio voluptatem eveniet a sequi nostrum? Maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius autem quis voluptas rerum a numquam exercitationem maxime sint excepturi maiores facere veniam quod rem quisquam nemo blanditiis illum, cupiditate esse.</p>
             </section>
           </section>
+
+
+          <footer>
+            <small>Copyright Shaar Haq</small>
+          </footer>
     </section>      
-    
+    <script>
+      $(window).on("load", function(){
+    $("#loader-wrapper").delay(3000).fadeOut("slow");});
+
+    </script>
 </body>
 </html>
