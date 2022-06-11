@@ -29,53 +29,6 @@
   }
 /* --------------------------------------------------------- End Global Settings --------------------------------------------------------- */
 /* ----------------------------------------------------------- Landing Section  ---------------------------------------------------------- */
-/* Navbar */
-  .navbar {
-    transition: all 0.3s ease 0s;
-  }
-
-  .navbar a {
-    color: var(--mainblue);
-    text-decoration: none;
-    opacity: 90%;
-    transition: all 0.3s ease 0s;
-  }
-  
-  .navbar a:visited {
-    color: var(--mainblue);
-    text-decoration: none;
-  }
-
-  a {
-    background: 
-      linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)),
-      linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 180, 1), rgba(0, 100, 200, 1));
-    background-size: 100% 0.1em, 0 0.1em;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 400ms;
-  }
-  
-  a:hover,
-  a:focus {
-    background-size: 0 0.1em, 100% 0.1em;
-    opacity: 200%;
-  }
-
-  .navbar ul{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    color: var(--mainblue);
-    font-family: "PetitaMedium";
-    font-size: 2em;
-    transition: all 0.3s ease 0s;
-  }
-
-  .navbar ul li {
-      margin: 1em;
-  }
-
   .main_header {
       background-color: var(--eerieblack);
       color: var(--mainblue);
@@ -88,6 +41,7 @@
       flex-direction: column;
       transition: all 0.4s ease 0s;
     }
+
   .main_header a {
     text-decoration: none;
     color: var(--mainblue)
@@ -244,17 +198,106 @@
   height: 100vh;
   width: 100%;
 }
+/* ---------------------------------------------------------- End First Info Section  ---------------------------------------------------- */
 
-.whoAmI{
+
+
+
+/* ---------------------------------------------------------------- Footer Section ------------------------------------------------------- */
+
+footer {
+  background-image: url("images/home2-large.jpg");
+  width: 100%;
+
+}
+.footer_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: "PetitaBold";
   max-width: 1300px;
-  margin: 5em;
-  padding-top: 10em;
-  border: 5px solid var(--mainblue);
-  border-radius: 25px;
-  background-color: var(--grey);
+  height: 40vh;
+  font-size: 2em;
+  text-decoration: none;
+  background-color: transparent;
 }
 
-.whoAmI h2 {
-  color: white;
+.links {
+  background-color: transparent;
+  text-decoration: none;
 }
 
+.links ul {
+  list-style: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.links ul li {
+  text-decoration: none;
+  background-color: transparent;
+  padding: 0.5em;
+}
+
+.links ul li a:visited {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.stuff {
+  background-color: transparent;
+  transition: all 0.4s ease 0s;
+}
+
+.socials {
+  background-color: transparent;
+  width: 50%;
+  transition: all 0.4s ease 0s;
+}
+
+.stuff a {
+  background: none;
+}
+
+.stuff a:hover {
+  background: none;
+}
+
+.stuff {
+  transition: all 0.4s ease 0s;
+}
+
+.stuff a img:hover {
+  transform: translate(0px, -15px);
+}
+
+a {
+  background: 
+    linear-gradient(to right, transparent, transparent),
+    linear-gradient(to right, var(--white),var(--white));
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 500ms;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  background-size: 0 0.1em, 100% 0.1em;
+  opacity: 200%;
+}
+
+.copyright {
+  font-weight: bold;
+  font-family: "PetitaBold";
+  font-size: 0.89em;
+  background-color: transparent;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  padding: 1em;
+}
+/* ------------------------------------------------------------- End Footer Section ------------------------------------------------------- */
