@@ -257,19 +257,22 @@ footer {
 .links {
   background-color: transparent;
   text-decoration: none;
-  border: 2px solid var(--white)
+  border: 2px solid var(--white);
+  color: var(--white);;
 }
 
 .links ul {
   list-style: none;
   text-decoration: none;
   background-color: transparent;
+  color: var(--white);
 }
 
 .links ul li {
   text-decoration: none;
   background-color: transparent;
   padding: 1em;
+  color: var(--white);
 }
 
 .link ul li a {
@@ -324,7 +327,7 @@ a:hover,
 a:focus {
   background-size: 0 0.1em, 100% 0.1em;
   opacity: 200%;
-}
+}gi
 
 .copyright {
   font-weight: bold;
