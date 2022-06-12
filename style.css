@@ -25,6 +25,11 @@
     font-family: 'SpaceMonoReg';
     src: url('fonts/SpaceMono-Regular.ttf');
   } 
+
+  @font-face {
+    font-family: 'SpaceMonoBold';
+    src: url('fonts/SpaceMono-Bold.ttf');
+  } 
   
   @font-face {
     font-family: Cyber;
@@ -36,7 +41,7 @@
       margin: 0 auto;
       scroll-behavior: smooth;
       padding: 0;
-      background-color: black;
+      background-color: var(--eerieblack);
   }
 /* --------------------------------------------------------- End Global Settings --------------------------------------------------------- */
 /* ----------------------------------------------------------- Landing Section  ---------------------------------------------------------- */
@@ -64,7 +69,7 @@
   .main_header h1 {
       margin: 0 auto;
       font-size: 10em;
-      font-family: SpaceMonoReg;
+      font-family: SpaceMonoBold;
       transition: all 0.4s ease 0s;
       background: transparent
   }
@@ -139,6 +144,9 @@
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: black;
 }
 
@@ -148,7 +156,6 @@
   height: 30px;
   position: fixed;
   border: 4px solid var(--white);
-  top: 50%;
   animation: loader 3s 3 ease-in;
 }
 
@@ -213,21 +220,92 @@
   color: var(--white);
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   font-family: "SpaceMonoReg";
+  transition: all 0.4s ease 0s;
 }
 
 .tile {
   margin: 2em;
   background-color: var(--grey);
-  height: 30vh;
-  width: 50%;
+  height: 70vh;
+  transition: all 0.4s ease 0s;
+  border-radius: 5px;
+}
+
+.tile:hover {
+  transform: translate(0px, -10px);
 }
 
 .tile h2 {
   background-color: transparent;
   text-align: center;
+  margin: 1em;
+  font-family: "SpaceMonoBold";
 }
 
+.tile_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.tile_content p {
+  margin: 2em;
+  width: 30vw;
+  margin-right: 0;
+  background-color: transparent;
+}
+
+.map {
+  max-height: 40vh;
+  margin: 2em;
+}
+
+.languages {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: var(--mainblue);
+}
+
+.languages li {
+  background-color: transparent;
+}
+.languages li a {
+  color: var(--mainblue);
+  background-color: transparent;
+}
+
+.languages li a:visited {
+  color: var(--mainblue);
+  background-color: transparent;
+}
+
+.languages a {
+  background: 
+    linear-gradient(to right, transparent, transparent),
+    linear-gradient(to right, var(--mainblue),var(--mainblue));
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 500ms;
+  text-decoration: none;
+}
+
+languages a:hover,
+languages a:focus {
+  background-size: 0 0.1em, 100% 0.1em;
+  opacity: 200%;
+}
+
+.languages_mobile {
+  display: none;
+}
 
 /* ---------------------------------------------------------- End First Info Section  ---------------------------------------------------- */
 
@@ -248,8 +326,8 @@ footer {
   font-weight: bold;
   font-family: "SpaceMonoReg";
   max-width: 1300px;
-  height: 40vh;
-  font-size: 1.5em;
+  height: 35vh;
+  font-size: 1em;
   text-decoration: none;
   background-color: transparent;
   color: var(--white);
@@ -309,8 +387,21 @@ footer {
   transition: all 0.4s ease 0s;
 }
 
+.stuff a img {
+  padding: 1em;
+}
+
 .stuff a img:hover {
   transform: translate(0px, -15px);
+}
+
+.find_me {
+  text-align: center;
+  background-color: transparent;
+}
+
+.find_me h4 {
+  background-color: transparent;
 }
 
 a {
@@ -342,3 +433,68 @@ a:focus {
   padding: 1em;
 }
 /* ------------------------------------------------------------- End Footer Section ------------------------------------------------------- */
+
+
+
+
+
+@media all and (max-width: 800px) {
+  .section_two {
+    width: 80vw;
+    height: 100%;
+  }
+  
+  .tile {
+    margin: 0;
+    height: 90vh;
+    width: 85vw;
+  }
+  
+  .tile h2 {
+    text-align: center;
+    margin: 1em;
+    font-family: "SpaceMonoBold";
+  }
+  
+  .tile_content {
+    flex-direction: column;
+  }
+  
+  .tile_content p {
+    margin: 0;
+    width: 70vw;
+  }
+  
+  .map {
+    max-height: 25vh;
+    margin: 2em;
+  }
+  
+  .languages {
+    display: none;
+  }
+
+  .languages_mobile {
+    display: flex;
+    background-color: transparent;
+    padding: 1em;
+  }
+
+  .tile_languages {
+    background-color: none;
+  }
+
+  .row_one {
+    background-color: transparent;
+  }
+
+  .row_two {
+    background-color: transparent;
+  }
+
+  .languages_mobile img {
+    width: 75px;
+    background-color: transparent;
+    padding: 1em;
+  }
+}
