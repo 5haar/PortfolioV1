@@ -20,18 +20,32 @@
     font-family: 'PetitaLight';
     src: url('fonts/PetitaLight.ttf');
   } 
+
+  @font-face {
+    font-family: 'SpaceMonoReg';
+    src: url('fonts/SpaceMono-Regular.ttf');
+  } 
   
+  @font-face {
+    font-family: Cyber;
+    src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+    font-display: swap;
+  }
+
   * {
       margin: 0 auto;
       scroll-behavior: smooth;
       padding: 0;
-      background-color: var(--eerieblack);
+      background-color: black;
   }
 /* --------------------------------------------------------- End Global Settings --------------------------------------------------------- */
 /* ----------------------------------------------------------- Landing Section  ---------------------------------------------------------- */
   .main_header {
-      background-color: var(--eerieblack);
-      color: var(--mainblue);
+      background-image: url(images/greysand.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: var(--white);
       height: 100vh;
       width: 100%;
       text-align: center;
@@ -44,14 +58,15 @@
 
   .main_header a {
     text-decoration: none;
-    color: var(--mainblue)
+    color: var(--white)
   }
   
   .main_header h1 {
       margin: 0 auto;
       font-size: 10em;
-      font-family: PetitaBold;
+      font-family: SpaceMonoReg;
       transition: all 0.4s ease 0s;
+      background: transparent
   }
 
   .main_header h1:hover {
@@ -59,9 +74,11 @@
   }
   
   .main_header small {
+      color: var(--white);
       margin: 0 auto;
       font-size: 3em;
       font-family: PetitaBold;
+      background: transparent;
   }
 
   /* Scroll Down Animation */
@@ -76,10 +93,7 @@
     padding-top: 50px;
     transition: all 0.3s ease 0s;
     border: 1px solid var(--white);
-  }
-
-  .scroll-down:hover {
-    background-color: var(--white);
+    background-color: transparent;
   }
 
   .scroll-down::before,
@@ -125,7 +139,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--mainblue);
+  background-color: black;
 }
 
 .loader {
@@ -192,12 +206,29 @@
 }
 /* ---------------------------------------------------------- End Landing Section  ------------------------------------------------------ */
 /* ---------------------------------------------------------- First Info Section  ------------------------------------------------------- */
-#section_two {
-  background-color: var(--eerieblack);
-  color: var(--main);
-  height: 100vh;
+.section_two {
   width: 100%;
+  height: 100vh;
+  background-color: var(--eerieblack);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  font-family: "SpaceMonoReg";
 }
+
+.tile {
+  margin: 2em;
+  background-color: var(--grey);
+  height: 30vh;
+  width: 50%;
+}
+
+.tile h2 {
+  background-color: transparent;
+  text-align: center;
+}
+
+
 /* ---------------------------------------------------------- End First Info Section  ---------------------------------------------------- */
 
 
@@ -208,17 +239,17 @@
 footer {
   background-image: url("images/home2-large.jpg");
   width: 100%;
-
 }
+
 .footer_container {
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-family: "PetitaBold";
+  font-family: "SpaceMonoReg";
   max-width: 1300px;
   height: 40vh;
-  font-size: 2em;
+  font-size: 1.5em;
   text-decoration: none;
   background-color: transparent;
 }
@@ -226,6 +257,7 @@ footer {
 .links {
   background-color: transparent;
   text-decoration: none;
+  border: 2px solid var(--white)
 }
 
 .links ul {
@@ -237,12 +269,14 @@ footer {
 .links ul li {
   text-decoration: none;
   background-color: transparent;
-  padding: 0.5em;
+  padding: 1em;
 }
+
 .link ul li a {
   color: var(--white);
   text-decoration: none;
 }
+
 .links ul li a:visited {
   color: var(--white);
   text-decoration: none;
@@ -255,7 +289,7 @@ footer {
 
 .socials {
   background-color: transparent;
-  width: 50%;
+  width: 20%;
   transition: all 0.4s ease 0s;
 }
 
@@ -294,7 +328,7 @@ a:focus {
 
 .copyright {
   font-weight: bold;
-  font-family: "PetitaBold";
+  font-family: "SpaceMonoReg";
   font-size: 0.89em;
   background-color: transparent;
   justify-content: center;
