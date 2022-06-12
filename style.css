@@ -252,6 +252,7 @@ footer {
   font-size: 1.5em;
   text-decoration: none;
   background-color: transparent;
+  color: var(--white);
 }
 
 .links {
@@ -275,7 +276,7 @@ footer {
   color: var(--white);
 }
 
-.link ul li a {
+.links ul li a {
   color: var(--white);
   text-decoration: none;
 }
@@ -327,7 +328,7 @@ a:hover,
 a:focus {
   background-size: 0 0.1em, 100% 0.1em;
   opacity: 200%;
-}gi
+}
 
 .copyright {
   font-weight: bold;
