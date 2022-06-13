@@ -376,11 +376,61 @@ languages a:focus {
   width: 400px;
   margin: 2em;
 }
+/* --------------------------------------------------------- End Second Info Section  ---------------------------------------------------- */
+/* ---------------------------------------------------------- Third Info Section  -------------------------------------------------------- */
+#section_four {
+  width: 100%;
+  height: 100vh;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "SpaceMonoReg";
+  transition: all 0.4s ease 0s;
+}
+.tile3 {
+  margin: 1.5em;
+  background: #000000;
+  height: 75vh;
+  width: 70vw;
+  transition: all 0.4s ease 0s;
+  border-radius: 5px;
+  border: 1px solid var(--white)
+}
 
+.tile3:hover {
+  transform: translate(0px, -10px);
+  border: 1px solid var(--kusama);
+}
 
-/* --------------------------------------------------------- End Second Info Section  ----- ---------------------------------------------- */
+.tile3 h2 {
+  background-color: transparent;
+  text-align: center;
+  margin: 1em;
+  font-family: "Space Grotesk";
+}
 
+.tile3_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
 
+.tile3_content p {
+  margin: 2em;
+  width: 30vw;
+  font-size: 0.75em;
+  background-color: transparent;
+}
+
+#image2 {
+  height: 400px;
+  width: 400px;
+  margin: 2em;
+}
+/* --------------------------------------------------------- End Third Info Section  ----------------------------------------------------- */
 /* ---------------------------------------------------------------- Footer Section ------------------------------------------------------- */
 
 footer {
