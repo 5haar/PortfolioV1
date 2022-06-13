@@ -6,4 +6,4 @@ setInterval(function() {
     let random = Math.floor(Math.random() * 4);
     image.src = images[random];
     
-}, 5000);
+}, 2000);
