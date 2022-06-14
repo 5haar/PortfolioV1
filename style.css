@@ -365,7 +365,7 @@ languages a:focus {
   background-color: transparent;
 }
 
-.tile2_content p {
+.desktop {
   margin: 2em;
   width: 30vw;
   font-size: 0.70em;
@@ -377,6 +377,14 @@ languages a:focus {
   width: 400px;
   margin: 2em;
   border-radius: 5px;
+}
+
+.mobile {
+  display: none;
+  margin: 2em;
+  width: 30vw;
+  font-size: 0.70em;
+  background-color: transparent;
 }
 /* --------------------------------------------------------- End Second Info Section  ---------------------------------------------------- */
 /* ---------------------------------------------------------- Third Info Section  -------------------------------------------------------- */
@@ -418,13 +426,6 @@ languages a:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
-}
-
-.tile3_content p {
-  margin: 2em;
-  width: 30vw;
-  font-size: 0.68em;
   background-color: transparent;
 }
 
@@ -678,6 +679,9 @@ a:focus {
 
 @media all and (max-width: 800px) {
 
+  .main_header {
+    background-size:contain;
+  }
   .main_header h1 {
     font-size: 5em;
   }
@@ -699,6 +703,7 @@ a:focus {
     margin: 1em;
     height: 90vh;
     width: 85vw;
+    height: 115vh;
   }
   
   .tile h2 {
@@ -751,6 +756,107 @@ a:focus {
     background-color: transparent;
     padding: 1em;
   }
+  /* ------------------------------------------------------------------------------------------ */
+  #section_three {
+    width: 80vw;
+    height: 100vh;
+  }
+  .tech_project_reflection {
+    margin: 0em;
+  }
+
+  .tile2 {
+    margin: 1em;
+    height: 85vh;
+    width: 85vw;
+  }
+  
+  .tile2_content {
+    flex-direction: column;
+  }
+  
+  .desktop {
+    display: none;
+  }
+  
+  #image {
+    max-height: 40vh;
+    max-width: 70vw;
+    margin: 2em;
+    border-radius: 5px;
+  }
+
+  .mobile {
+    display: flex;
+    color: var(--white);
+    background-color: transparent;
+    margin: 1;
+    width: 70vw;
+    font-size: 0.75em;
+  }
+  /* ------------------------------------------------------------------------------------------ */
+  #section_tech_projects {
+    width: 80vw;
+    height: 150vh;
+  }
+
+  .tech_tile_container {
+    width: 85vw;
+    height: 150vh;
+    margin: 0em;
+  }
+
+  .tech_flex_container {
+    flex-direction: column;
+    margin: 0em;
+  }
+
+  .tech_tile_content {
+    width: 55vw;
+    margin: 0em;
+  }
+
+
+  #section_four {
+    width: 80vw;
+    height: 125vh;
+  }
+  
+  .tile3 {
+    margin: 0em;
+    height: 85vh;
+    width: 85vw;
+  }
+
+  .pd_reflection {
+    margin: 0em;
+  }
+  
+  .tile3_content {
+    flex-direction: column-reverse;
+  }
+  
+  .desktop {
+    display: none;
+  }
+  
+  #image2 {
+    max-height: 40vh;
+    max-width: 70vw;
+    margin: 2em;
+    border-radius: 5px;
+  }
+
+  .mobile {
+    display: flex;
+    color: var(--white);
+    background-color: transparent;
+    margin: 0;
+    width: 70vw;
+    font-size: 0.75em;
+  }
+
+  /* ------------------------------------------------------------------------------------------ */
 
   footer {
     background-position: center;
@@ -784,11 +890,18 @@ a:focus {
     width: 50vw;
     height: 60vh;
   }
-  
+
+  .tile_content {
+    font-size: 1.2em;
+  }
+
+  .map {
+    height: 50vh;
+  }
 
   .tile2 {
     width: 50vw;
-    height: 45vh;
+    height: 50vh;
   }
 
   .tile2 p {
@@ -803,6 +916,25 @@ a:focus {
   .tile3 p {
     font-size: 1em;
   }
+
+  #image2 {
+    width: 20vw;
+    height: 35vh;
+  }
+
+  .tech_tile_content {
+    background-color: var(--kusama);
+    width: 15vw;
+    height: 25vh;
+    padding: 1em;
+    font-size: 1.21em;
+  }
+
+  .tech_tile_container {
+    width: 50vw;
+    height: 45vh;
+  }
+
 }
 
 
