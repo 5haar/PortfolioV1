@@ -8,6 +8,11 @@
   }
   
   @font-face {
+    font-family: 'Cpunk';
+    src: url('fonts/Cpunk.ttf');
+}
+
+  @font-face {
       font-family: 'PetitaBold';
       src: url('fonts/PetitaBold.ttf');
   }
@@ -430,8 +435,8 @@ languages a:focus {
 }
 
 #image2 {
-  height: 400px;
-  width: 400px;
+  height: 450px;
+  width: 450px;
   margin: 2em;
   border-radius: 5px;
 }
@@ -548,8 +553,148 @@ languages a:focus {
 
 
 /* --------------------------------------------------------- End Fourth Info Section  ------------------------------------------------------ */
+/* ---------------------------------------------------------  Fifth Info Section  ---------------------------------------------------------- */
+#program_reflection {
+  width: 100%;
+  height: 100vh;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "SpaceMonoReg";
+  transition: all 0.4s ease 0s;
+}
 
-/* ---------------------------------------------------------------- Footer Section -------------------------------------------------------- */
+.reflection_container {
+  width: 70vw;
+  text-align: center;
+  font-size: 1em;
+  margin: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  padding: 2em;
+  transition: all 0.4s ease 0s;
+}
+
+.reflection_container:hover {
+  border-color: var(--kusama);
+  transform: translate(0px, -10px);
+}
+
+.reflection_container h2 {
+  margin: 2em;
+}
+
+.reflection_container p {
+  text-align: left;
+}
+
+/* Cyber Text */
+/* Glowing Signature */
+
+.glow {
+  font-family: 'Cpunk';
+  font-size: 2em;
+  text-align:center;
+  color:rgba(255,255,255,.3); 
+  /* text-shadow: 0 0 1px rgba(157,208,154,.3); Fallback for nonCSS3? */
+  /* Stripes */
+  /*Fallback:
+http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html
+*/
+  background: -webkit-linear-gradient(transparent, transparent), url(https://i.imgur.com/WyMyxQ6.png) repeat;
+  /* clipping webkit magic */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Animation */
+  -webkit-animation: glow 3s infinite alternate;
+     -moz-animation: glow 3s infinite alternate;
+          animation: glow 3s infinite alternate;
+  -webkit-animation-timing-function: cubic-bezier(1,.3,.79,.81);
+     -moz-animation-timing-function: cubic-bezier(1,.3,.79,.81);
+          animation-timing-function: cubic-bezier(1,.3,.79,.81);
+}
+
+@-webkit-keyframes glow {
+  0% {
+    text-shadow: 0 0 1px var(--kusama),
+                 0 0 3px var(--kusama),
+                 0 0 5px var(--kusama);
+  }
+  50% {
+    text-shadow: 0 0 2px var(--kusama),
+                 0 0 5px var(--kusama);
+  }
+  52% {
+    text-shadow: 0 0 5px rgba(157,208,154,.3);
+  }
+  54% {
+    text-shadow: 0 0 2px rgba(255,255,255,.1),
+                 0 0 5px rgba(255,255,255,.1);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255,255,255,.1),
+                 0 0 5px rgba(255,255,255,.1),
+                 0 0 10px rgba(157,208,154,.3);
+  }
+}
+
+@-moz-keyframes glow {
+  0% {
+    text-shadow: 0 0 1px var(--mainblue),
+                 0 0 3px var(--mainblue),
+                 0 0 5px rgba(157,208,154,.3);
+  }
+  50% {
+    text-shadow: 0 0 2px rgba(255,255,255,.1),
+                 0 0 5px rgba(255,255,255,.1);
+  }
+  52% {
+    text-shadow: 0 0 5px rgba(157,208,154,.3);
+  }
+  54% {
+    text-shadow: 0 0 2px rgba(255,255,255,.1),
+                 0 0 5px rgba(255,255,255,.1);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255,255,255,.1),
+                 0 0 5px rgba(255,255,255,.1),
+                 0 0 10px rgba(157,208,154,.3);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 1px var(--kusama),
+                 0 0 3px var(--kusama),
+                 0 0 5px rgba(157,208,154,.3);
+  }
+  50% {
+    text-shadow: 0 0 2px rgba(255,255,255,.1),
+                 0 0 5px rgba(255,255,255,.1);
+  }
+  52% {
+    text-shadow: 0 0 5px rgba(157,208,154,.3);
+  }
+  54% {
+    text-shadow: 0 0 2px rgba(255,255,255,.1),
+                 0 0 5px rgba(255,255,255,.1);
+  }
+  100% {
+    text-shadow: 0 0 2px var(--mainblue),
+                 0 0 5px var(--mainblue),
+                 0 0 10px rgba(157,208,154,.3);
+  }
+}
+
+
+/* --------------------------------------------------------- End Fifth Info Section  ------------------------------------------------------- */
+/* ---------------------------------------------------------------- Footer Section --------------------------------------------------------- */
 
 footer {
   background-image: url("images/home2-large.jpg");
@@ -680,7 +825,7 @@ a:focus {
 @media all and (max-width: 800px) {
 
   .main_header {
-    background-size:contain;
+    background-size: 150vw;
   }
   .main_header h1 {
     font-size: 5em;
@@ -790,7 +935,7 @@ a:focus {
     display: flex;
     color: var(--white);
     background-color: transparent;
-    margin: 1;
+    margin: 1em;
     width: 70vw;
     font-size: 0.75em;
   }
@@ -857,7 +1002,32 @@ a:focus {
   }
 
   /* ------------------------------------------------------------------------------------------ */
+  #program_reflection {
+    width: 80vw;
+    height: 100vh;
 
+  }
+  
+  .reflection_container {
+    width: 85vw;
+    margin-bottom: 0em;
+    font-size: 1em;;
+  }
+  
+  .reflection_container h2 {
+    margin: 2em;
+  }
+  
+  .reflection_container p {
+    text-align: left;
+    font-size: 0.8em;
+  }
+
+  .glow {
+    padding-top: 1em;
+  }
+
+  /* ------------------------------------------------------------------------------------------ */
   footer {
     background-position: center;
   }
@@ -933,6 +1103,11 @@ a:focus {
   .tech_tile_container {
     width: 50vw;
     height: 45vh;
+  }
+
+  .reflection_container {
+    width: 25vw;
+    height: 40vh;
   }
 
 }
